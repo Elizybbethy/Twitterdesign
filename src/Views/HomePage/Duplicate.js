@@ -1,51 +1,72 @@
 import React from "react";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Divider, Grid, Typography } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
-import { ListSharp } from "@mui/icons-material";
 import Avatar from "@mui/material/Avatar";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ShareIcon from "@mui/icons-material/Share";
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
-export default function Duplicate() {
+export default function Duplicate({nameDetails}) {
+  console.log (nameDetails)
   return (
     <div>
-      {/* {nameDetails.map((user) => {
+      {nameDetails.map((data) => {
         return (
-          <div> */}
+          <div>
       <Grid
-        container            
+        container
+        direction="row"
+        spacing={2}
         justifyContent="center"
         alignContent="center"
       >
         <Grid Item xs={4}>
-          {/* <List>
-            <ListItem>
-              <ListItemAvatar> */}
-                <Avatar>
-                  <PersonIcon />
-                </Avatar>
-                {/* <ListItemText>{user.userName}</ListItemText>
-                        <ListItemText>{user.handle}</ListItemText> */}
-              {/* </ListItemAvatar>
-            </ListItem>
-          </List> */}
-          <Typography>Hi there</Typography>
+          <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignContent="center"
+            spacing={3}
+          >
+            <Grid item xs="12">
+              <Avatar>
+                <PersonIcon />
+              </Avatar>
+              <ListItemText>{data.userName}</ListItemText>
+                        <ListItemText>{data.handle}</ListItemText>
+            </Grid>            
+          </Grid>
         </Grid>
-        <Grid item xs={5} spacing={4}></Grid>
-        {/* <ListSharp></ListSharp> */}
-        <FavoriteIcon/>
-        <ShareIcon/>
+        <Grid item xs={8}>
+          {/* <ListSharp></ListSharp> */}
+          <Grid
+            container
+            direction="row"
+            spacing={3}
+            justifyContent="center"
+            alignContent="center"
+          >
+            <Grid item xs={8}>
+              <Typography>Hi there! how can help you</Typography>
+              <Typography>Hi there! how can help you</Typography>
+              <Divider/>
+              <Grid item xs={8}>
+            <FavoriteIcon />
+            <ShareIcon />
+          </Grid>
+            </Grid>
+            <Grid item xs={2}>
+              <Button variant="contained" color="primary">
+                Follow
+              </Button>
+            </Grid>
+          </Grid>
+          
+        </Grid>
       </Grid>
-      
-      {/* </div>
-          
-          
-        );
-      })} */}
     </div>
+  );
+        })}
+        </div>
   );
 }
