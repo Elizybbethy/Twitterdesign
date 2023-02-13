@@ -1,10 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { ListSharp } from "@mui/icons-material";
-import Avatar from "@mui/material/Avatar";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -14,30 +10,30 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import HomeIcon from "@mui/icons-material/Home";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Person2Icon from "@mui/icons-material/Person2";
+import { Button } from "@mui/material";
 
 export default function VaticoIcons() {
   return (
     <div>
       <Grid
         container
-        sm={8}
-        md={6}
         spancing={3}
         direction="row"
         justifyContent="center"
         alignItems="center"
+        bgcolor= "#eeeeee"
       >
-        <Grid item xs={3}>
+        <Grid item xs={2}>
           <List
             xs={{
               width: "100%",
               maxWidth: "180",
-              bgcolor: "background.paper",
+             
             }}
           >
             <ListItemButton>
               <ListItemIcon>
-                <TwitterIcon />
+                <TwitterIcon color="primary"/>
               </ListItemIcon>
               <ListItemText primary="Twitter" />
             </ListItemButton>
@@ -72,6 +68,7 @@ export default function VaticoIcons() {
               <ListItemText primary="Profile" />
             </ListItemButton>
           </List>
+          <Button color="primary" variant="contained" size="large">Tweet</Button>
         </Grid>
       </Grid>
     </div>
