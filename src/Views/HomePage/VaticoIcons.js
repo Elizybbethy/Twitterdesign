@@ -21,19 +21,18 @@ export default function VaticoIcons() {
         direction="row"
         justifyContent="flex-start"
         alignItems="center"
-        bgcolor= "#eeeeee"
+        bgcolor="#eeeeee"
       >
         <Grid item xs={2}>
           <List
             xs={{
               width: "100%",
               maxWidth: "180",
-             
             }}
           >
             <ListItemButton>
               <ListItemIcon>
-                <TwitterIcon color="primary"/>
+                <TwitterIcon color="primary" />
               </ListItemIcon>
               <ListItemText primary="Twitter" />
             </ListItemButton>
@@ -68,7 +67,9 @@ export default function VaticoIcons() {
               <ListItemText primary="Profile" />
             </ListItemButton>
           </List>
-          <Button color="primary" variant="contained" size="large">Tweet</Button>
+          <Button color="primary" variant="contained" size="large">
+            Tweet
+          </Button>
         </Grid>
       </Grid>
     </div>

@@ -18,11 +18,11 @@ export default function App() {
       welcome: "Welcome",
       comment: "This a free world. Enjoy it!",
       handle: "@buttercup",
-      
-        //     headline: "Trending in Uganda",
-        //     Title: "Men's Conference",
-        //     TweetsNumber: "3285"
-        // },
+
+      //     headline: "Trending in Uganda",
+      //     Title: "Men's Conference",
+      //     TweetsNumber: "3285"
+      // },
     },
     //   {
     //     headline: "Trending in Uganda",
@@ -47,7 +47,7 @@ export default function App() {
           <VaticoIcons />
         </Grid>
         {/* <Divider orientation="vertical" sx={{m:1, height: 100}}/> */}
-        <Grid item xs={7} >
+        <Grid item xs={7}>
           <Grid
             container
             direction="column"
@@ -67,15 +67,18 @@ export default function App() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={3}  display={{xs:"none", md:"block"}}>
-          <Grid container direction="column" justifyContent="flex-start" alignContent="flex-end">
+        <Grid item xs={3} display={{ xs: "none", md: "block" }}>
+          <Grid
+            container
+            direction="column"
+            justifyContent="flex-start"
+            alignContent="flex-end"
+          >
             <Grid item xs={12}>
               {/* <Trends /> */}
               <Search />
             </Grid>
-            <Grid item xs={12}>
-              
-            </Grid>
+            <Grid item xs={12}></Grid>
           </Grid>
         </Grid>
       </Grid>
