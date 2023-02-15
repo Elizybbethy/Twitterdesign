@@ -19,7 +19,7 @@ export default function VaticoIcons() {
         container
         spancing={3}
         direction="row"
-        justifyContent="center"
+        justifyContent="flex-start"
         alignItems="center"
         bgcolor= "#eeeeee"
       >

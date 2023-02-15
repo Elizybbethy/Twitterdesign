@@ -18,16 +18,16 @@ export default function App() {
       welcome: "Welcome",
       comment: "This a free world. Enjoy it!",
       handle: "@buttercup",
+      
+        //     headline: "Trending in Uganda",
+        //     Title: "Men's Conference",
+        //     TweetsNumber: "3285"
+        // },
     },
     //   {
-    //     profile:[
-    //       {userName: "Apple eyes", account:"Twitter", home:"Home"}],
-    //     tweets:[
-    //       {origin: "Tweet",
-    //       reTweet:"Re-Tweeted"}],
-    //     NewFeeds:[
-    //       {welcome:"hi there!", comment:"just a hero"}],
-
+    //     headline: "Trending in Uganda",
+    //     Title: "Men's Conference",
+    //     TweetsNumber: "3285"
     // },
   ]);
 
@@ -39,8 +39,11 @@ export default function App() {
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         alignItems="stretch"
+        margin-left="auto"
+        margin-right="auto"
+        padding={10}
       >
-        <Grid item xs={3} display={{ xs: "none", lg: "block" }}>
+        <Grid item xs={2} display={{ xs: "none", lg: "block" }}>
           <VaticoIcons />
         </Grid>
         {/* <Divider orientation="vertical" sx={{m:1, height: 100}}/> */}
@@ -64,10 +67,10 @@ export default function App() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={2}  display={{xs:"none", md:"block"}}>
+        <Grid item xs={3}  display={{xs:"none", md:"block"}}>
           <Grid container direction="column" justifyContent="flex-start" alignContent="flex-end">
             <Grid item xs={12}>
-              <Trends />
+              {/* <Trends /> */}
               <Search />
             </Grid>
             <Grid item xs={12}>

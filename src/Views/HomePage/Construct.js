@@ -26,40 +26,28 @@ export default function Construct({ nameDetails }) {
                   container
                   direction="row"
                   spacing={4}
-                  justifyContent="space-evenly"
+                  justifyContent="flex-start"
                   alignContent="center"
-                  alignItems="baseline"
+                  // alignItems="baseline"
                 >
                   <Grid item xs={2}>
                     <Avatar>
                       <AccountCircleIcon />
                     </Avatar>
-                    </Grid>
-                  {/* <Grid
-                    container
-                    direction="row"
-                    justifyContent="space-evenly"
-                    alignItems="baseline"
-                  > */}
-                    <Grid item xs={10}>
-                      <ListItemText>{user.userName}</ListItemText>
-                      <ListItemText>{user.handle}</ListItemText>
-                    </Grid>
-                    </Grid>
+                  </Grid>
 
+                  <Grid item xs={10}>
+                    <Grid container direction="column">
+                      <ListItemText>
+                        {user.userName}
+                        {user.handle}
+                      </ListItemText>
+                    </Grid>
                     <Typography>{user.comment}</Typography>
-                  
-                  <Grid item xs={12}></Grid>
-
-                  {/* <Button color="primary">follow</Button> */}
+                  </Grid>
                 </Grid>
-                {/* <Grid container>
-                    <Grid item sm={12}>
-                      
-                    </Grid>
-                  </Grid> */}
               </Grid>
-            {/* </Grid> */}
+            </Grid>
           </div>
         );
       })}
