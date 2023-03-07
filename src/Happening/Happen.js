@@ -1,35 +1,28 @@
 import React from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { Avatar, Button, Grid, TextField } from "@mui/material";
+import { Avatar, Button, Grid, IconButton, TextField } from "@mui/material";
 import GifBoxOutlinedIcon from "@mui/icons-material/GifBoxOutlined";
 import PermMediaRoundedIcon from "@mui/icons-material/PermMediaRounded";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import { Stack } from "@mui/system";
+import Bird from "../public/Bird.jpg";
 
 export default function () {
   return (
     <div>
       <Grid
         container
+        spancing={2}
         direction="row"
-        spacing={2}
+        alignItem="baseline"
         justifyContent="flex-start"
-        alignContent="center"
+       
       >
-        <Grid item>
-          <Grid
-            container
-            direction="row"
-            spacing={4}
-            justifyContent="flex-start"
-            alignContent="center"
-          >
-            <Grid item xs={2}>
-              <Avatar>
-                <AccountCircleIcon />
-              </Avatar>
-            </Grid>
-            <Grid item xs={10}>
+        <Grid item xs={2} >
+          <Avatar src={Bird} />
+        </Grid>
+        <Grid item xs={10} md={8}>
+          <Grid container rowSpacing={2}>
+            <Grid item xs={12}>
               <TextField
                 id="standard-basic"
                 label="What's happening?"
@@ -38,26 +31,26 @@ export default function () {
                 sx={{ width: "30ch" }}
               />
             </Grid>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          alignContent="flex-end"
-          spacing={4}
-        >
-          <Grid item xs={6}>
-            <Stack direction={{ xs: "row" }} spacing={{ xs: 1, sm: 2, md: 4 }}>
-              <PermMediaRoundedIcon color="primary"/>
-              <GifBoxOutlinedIcon color="primary"/>
-              <LocationOnOutlinedIcon color="primary"/>
-            </Stack>
-          </Grid>
-          <Grid item xs={2}>
-            <Button color="primary" variant="contained">
-              Tweet
-            </Button>
+            <Grid item xs={12}>
+              <Grid container >
+                <Grid item xs={10}>
+                  <IconButton>
+                    <PermMediaRoundedIcon color="primary" />
+                  </IconButton>
+                  <IconButton>
+                    <GifBoxOutlinedIcon color="primary" />
+                  </IconButton>
+                  <IconButton>
+                    <LocationOnOutlinedIcon color="primary" />
+                  </IconButton>
+                </Grid>
+                <Grid item xs={2}>
+                  <Button color="primary" variant="contained" sx={{borderRadius: "18px"}}>
+                    Tweet
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

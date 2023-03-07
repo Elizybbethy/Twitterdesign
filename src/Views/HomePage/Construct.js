@@ -15,34 +15,25 @@ export default function Construct({ nameDetails }) {
           <div>
             <Grid
               container
-              direction="row"
               spancing={2}
+              direction="row"
+              alignItem="baseline"
               justifyContent="flex-start"
-              alignContent="center"
-              // style={{ backgroundColor: "#8d9091" }}
             >
-              <Grid item>
-                <Grid
-                  container
-                  direction="row"
-                  spacing={4}
-                  justifyContent="flex-start"
-                  alignContent="center"
-                  // alignItems="baseline"
-                >
-                  <Grid item xs={2}>
-                    <Avatar>
-                      <AccountCircleIcon />
-                    </Avatar>
+              <Grid item xs={2}>
+                <Avatar>
+                  <AccountCircleIcon />
+                </Avatar>
+              </Grid>
+              <Grid item xs={10} md={8}>
+                <Grid container>
+                  <Grid item xs={12}>
+                    <ListItemText style={{color: "#2196f3"}}>
+                      {user.userName}
+                      {user.handle}
+                    </ListItemText>
                   </Grid>
-
-                  <Grid item xs={10}>
-                    <Grid container direction="column">
-                      <ListItemText>
-                        {user.userName}
-                        {user.handle}
-                      </ListItemText>
-                    </Grid>
+                  <Grid item xs={12}>
                     <Typography>{user.comment}</Typography>
                   </Grid>
                 </Grid>

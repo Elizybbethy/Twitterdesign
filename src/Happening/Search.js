@@ -5,6 +5,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
+import List from "@mui/material/List";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 export default function Search() {
   return (
@@ -13,23 +15,20 @@ export default function Search() {
         container
         direction="column"
         justifyContent="flex-start"
-        alignContent="center"
+        alignItems="stretch"
       >
-        <Grid item xs={2}>
-          <Box sx={{ p: 1, m: 1, mx: "auto", width: 100, height: 100 }}>
+        <Grid item xs={10} md={8}>
+          <Box sx={{ width: 300, height: 100 }}>
             <Paper
               component="form"
               sx={{
                 p: "2px 4px",
                 display: "flex",
                 alignContent: "center",
-                width: 100,
+                width: 300,
                 backgroundColor: "#f5f5f5",
               }}
             >
-              {/* <IconButton sx={{ p: "10px" }}>
-            <MenuIcon />
-          </IconButton> */}
               <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
                 <SearchIcon />
               </IconButton>
@@ -38,16 +37,118 @@ export default function Search() {
             </Paper>
           </Box>
         </Grid>
+        <Grid item xs={10} md={8}>
+          <Grid
+            container
+            direction="column"
+            justifyContent="flex-start"
+            alignItems="stretch"
+          >
+            <Box sx={{ width: 300, height: "auto" }}>
+              <Paper
+                sx={{
+                  p: "2px 4px",
+                  alignContent: "center",
+                  backgroundColor: "#f5f5f5",
+                }}
+              >
+                <Grid item xs={12}>
+                  <Typography gutterBottom variant="subtitle1">
+                    Trends for you
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Grid
+                    container
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="baseline"
+                  >
+                    <Grid item xs={8}>
+                      <Typography variant="body2">
+                        Trending in Uganda
+                      </Typography>
+                      <Typography variant="body2">UNEB</Typography>
+                      <Typography variant="body2">215 tweets</Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <IconButton edge="end">
+                        <MoreHorizIcon sytle={{ paddingLeft: 120 }} />
+                      </IconButton>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Paper>
+            </Box>
+          </Grid>
+        </Grid>
+      </Grid>
 
-        <Grid item sx={2} display={{ xs: "none", lg: "block" }}>
-          <Box sx={{ mx: "auto", width: 50, height: 50 }}>
-            <Paper>
-              <Grid item></Grid>
-              <Typography>Trends for you</Typography>
+      {/* <Grid
+        container
+        direction="column"
+        justifyContent="flex-start"
+        alignContent="center"
+      >
+        <Grid item xs={2}>
+          
+        </Grid>
+
+        <Grid item xs={2}>
+          <Box sx={{ mx: "auto", width: 300, height: 100 }}>
+            <Paper
+              sx={{
+                p: "2px 4px",
+                alignContent: "center",
+                backgroundColor: "#f5f5f5",
+              }}
+            >
+              <Grid container direction="column" spacing={0}>
+                <Grid item>
+                  
+                </Grid>
+                <Grid item>
+                  <List>
+                    <Typography >
+                      
+                      
+                      <br />
+                      
+                      <br />
+                      
+                    </Typography>
+                    <Typography variant="body2">Uganda</Typography>
+                  </List>
+                </Grid>
+                <Grid item>
+                  <List>
+                    <Typography variant="body2">
+                      Trending in Uganda
+                      <br />
+                      UNEB
+                      <br />
+                      215 tweets
+                    </Typography>
+                    <Typography variant="body2">Uganda</Typography>
+                  </List>
+                </Grid>
+                <Grid item>
+                  <List>
+                    <Typography variant="body2">
+                      Trending in Uganda
+                      <br />
+                      UNEB
+                      <br />
+                      215 tweets
+                    </Typography>
+                    <Typography variant="body2">Uganda</Typography>
+                  </List>
+                </Grid>
+              </Grid>
             </Paper>
           </Box>
         </Grid>
-      </Grid>
+      </Grid> */}
     </div>
   );
 }

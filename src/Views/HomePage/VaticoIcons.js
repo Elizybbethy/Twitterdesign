@@ -10,32 +10,29 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import HomeIcon from "@mui/icons-material/Home";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Person2Icon from "@mui/icons-material/Person2";
-import { Button } from "@mui/material";
+import { Avatar, Button, Typography } from "@mui/material";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import FeaturedPlayListOutlinedIcon from '@mui/icons-material/FeaturedPlayListOutlined';
 
 export default function VaticoIcons() {
   return (
     <div>
-      <Grid
-        container
-        spancing={3}
-        direction="row"
+      <Grid container direction="column"
         justifyContent="flex-start"
-        alignItems="center"
-        bgcolor="#eeeeee"
-      >
-        <Grid item xs={2}>
-          <List
+        rowSpacing={4}
+        alignItems="stretch">
+        <Grid item xs={12}>
+          <TwitterIcon color="primary" sx={{fontSize: 35}}/>
+        </Grid>
+        <Grid item xs={12}>
+        <List
             xs={{
               width: "100%",
               maxWidth: "180",
             }}
           >
-            <ListItemButton>
-              <ListItemIcon>
-                <TwitterIcon color="primary" />
-              </ListItemIcon>
-              <ListItemText primary="Twitter" />
-            </ListItemButton>
+            
             <ListItemButton>
               <ListItemIcon>
                 <HomeIcon />
@@ -62,16 +59,58 @@ export default function VaticoIcons() {
             </ListItemButton>
             <ListItemButton>
               <ListItemIcon>
+                <BookmarkBorderOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Bookmarks" />
+            </ListItemButton>
+            <ListItemButton>
+              <ListItemIcon>
+                <FeaturedPlayListOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Lists" />
+            </ListItemButton>
+            <ListItemButton>
+              <ListItemIcon>
                 <Person2Icon />
               </ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItemButton>
           </List>
-          <Button color="primary" variant="contained" size="large">
+        </Grid>
+        <Grid item xs={12}>
+        <Button color="primary" variant="contained" sx={{borderRadius: "18px", width: 200}}>
             Tweet
           </Button>
         </Grid>
+        <Grid item xs={12}>
+          <Grid container direction="row" justifyContent="center" alignItems="center" >
+            <Grid item xs={4} >
+              <Avatar/>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography>Elizy</Typography>
+              <Typography>@Elizy</Typography>
+            </Grid>
+            <Grid item xs={2}>
+              <MoreHorizIcon/>
+            </Grid>
+          </Grid>
+        </Grid>
       </Grid>
+
+      {/* <Grid
+        container
+        spancing={3}
+        direction="row"
+        justifyContent="flex-start"
+        alignItems="center"
+        bgcolor="#eeeeee"
+      >
+        <Grid item xs={2}>
+          
+          
+        </Grid>
+      </Grid> */}
     </div>
   );
 }
