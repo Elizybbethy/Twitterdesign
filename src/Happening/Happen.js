@@ -4,7 +4,7 @@ import { Avatar, Button, Grid, IconButton, TextField } from "@mui/material";
 import GifBoxOutlinedIcon from "@mui/icons-material/GifBoxOutlined";
 import PermMediaRoundedIcon from "@mui/icons-material/PermMediaRounded";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import Bird from "../public/Bird.jpg";
+import Bird from "../assets/pics/avatar/Bird.jpg";
 
 export default function () {
   return (

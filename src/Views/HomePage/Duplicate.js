@@ -6,6 +6,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ShareIcon from "@mui/icons-material/Share";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import give from "../../assets/pics/avatar/give.png";
 
 export default function Duplicate({ nameDetails }) {
   return (
@@ -22,9 +23,8 @@ export default function Duplicate({ nameDetails }) {
               
             >
               <Grid Item xs={3}>
-                <Avatar>
-                  <PersonIcon />
-                </Avatar>
+                <Avatar src={give}/>
+                  
                 <ListItemText>{data.userName}</ListItemText>
                 <ListItemText style={{ color: "#2196f3" }}>
                   {data.handle}

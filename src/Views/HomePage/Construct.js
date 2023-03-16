@@ -6,6 +6,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import smile from "../../assets/pics/avatar/smile.png";
 
 export default function Construct({ nameDetails }) {
   return (
@@ -21,9 +22,8 @@ export default function Construct({ nameDetails }) {
               justifyContent="flex-start"
             >
               <Grid item xs={2}>
-                <Avatar>
-                  <AccountCircleIcon />
-                </Avatar>
+                <Avatar src={smile}/>
+                  
               </Grid>
               <Grid item xs={10} md={8}>
                 <Grid container>

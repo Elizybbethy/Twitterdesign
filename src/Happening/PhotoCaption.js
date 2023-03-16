@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Grid, Avatar, Typography, IconButton } from "@mui/material";
-import Bread from "../public/Bread.jpg";
+import Bread from "../assets/pics/tweet/Bread.jpg";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import QuickreplyRoundedIcon from "@mui/icons-material/QuickreplyRounded";
-import Bird from "../public/Bird.jpg";
+import Bird from "../assets/pics/avatar/Bird.jpg";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 export default function PhotoCaption({ TweetsDetails }) {

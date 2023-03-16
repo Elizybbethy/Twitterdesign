@@ -14,6 +14,7 @@ import { Avatar, Button, Typography } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import FeaturedPlayListOutlinedIcon from '@mui/icons-material/FeaturedPlayListOutlined';
+import smile from "../../assets/pics/avatar/smile.png";
 
 export default function VaticoIcons() {
   return (
@@ -85,7 +86,7 @@ export default function VaticoIcons() {
         <Grid item xs={12}>
           <Grid container direction="row" justifyContent="center" alignItems="center" >
             <Grid item xs={4} >
-              <Avatar/>
+              <Avatar src={smile}/>
             </Grid>
             <Grid item xs={6}>
               <Typography>Elizy</Typography>

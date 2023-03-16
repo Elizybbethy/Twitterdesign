@@ -7,11 +7,11 @@ import Happen from "./Happening/Happen";
 import Trends from "./Happening/Search";
 import { Box, Divider, Grid } from "@mui/material";
 import Search from "./Happening/Search";
-import meat from "./public/meat.jpg";
-import Bread from "./public/Bread.jpg";
-import cake from "./public/cake.jpg";
-import Chapati from "./public/Chapati.jpg";
-import muchomo from "./public/muchomo.jpg";
+import meat from "../src/assets/pics/tweet/meat.jpg";
+import Bread from "../src/assets/pics/tweet/Bread.jpg";
+import cake from "../src/assets/pics/tweet/cake.jpg";
+import Chapati from "../src/assets/pics/tweet/Chapati.jpg";
+import muchomo from "../src/assets/pics/tweet/muchomo.jpg";
 import Tweets from "./Happening/Tweets";
 import PhotoCaption from "./Happening/PhotoCaption";
 
@@ -48,6 +48,18 @@ export default function App() {
     //   Description: "The best movie ever companion",
     // },
   ]);
+  const [searchDetails, setsearchDetails] = React.useState([
+    {
+      headline: "Trending in Uganda",
+      Title: "Men's Conference",
+      TweetsNumber: "3285",
+  },
+{
+  headline: "Trending in Uganda",
+      Title: "Men's Conference",
+      TweetsNumber: "3285",
+}
+]);
   const [nameDetails, setnameDetails] = React.useState([
     {
       userName: "ButterCup",
@@ -57,16 +69,9 @@ export default function App() {
       comment: "This a free world. Enjoy it!",
       handle: "@buttercup",
 
-      //     headline: "Trending in Uganda",
-      //     Title: "Men's Conference",
-      //     TweetsNumber: "3285"
-      // },
+      
     },
-    //   {
-    //     headline: "Trending in Uganda",
-    //     Title: "Men's Conference",
-    //     TweetsNumber: "3285"
-    // },
+    
   ]);
 
   return (
@@ -96,7 +101,7 @@ export default function App() {
         </Grid>
         <Grid item xs={3} display={{ xs: "none", md: "block" }}>
           <Box p={2}>
-            <Search />
+            <Search searchDetails={searchDetails}/>
           </Box>
         </Grid>
       </Grid>
